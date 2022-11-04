@@ -1,6 +1,6 @@
-# Unreal Engine Couse 
+# Unreal Engine Course 
 
-1) General most used api : 
+1) General most used API : 
 
 ```c++
     TSubclassOf<UObject> Class;
