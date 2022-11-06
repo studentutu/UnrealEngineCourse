@@ -18,7 +18,6 @@ class UE4THIRDPERSON_API ALesson2Task1 : public AActor
 	GENERATED_BODY()
 
 public:
-
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	UStaticMeshComponent* MeshToSet;
 
@@ -38,8 +37,8 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 private:
-
 	static float tempFLot;
+
 	UFUNCTION(BlueprintCallable)
 	void ChangeMesh(AActor* overlappedActor, UStaticMesh* newMesh);
 };
