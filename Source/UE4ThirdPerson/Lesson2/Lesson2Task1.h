@@ -25,7 +25,7 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	UBoxComponent* BoxComponent;
 
-	
+
 	// Sets default values for this actor's properties
 	ALesson2Task1();
 
@@ -39,6 +39,7 @@ public:
 
 private:
 
+	static float tempFLot;
 	UFUNCTION(BlueprintCallable)
 	void ChangeMesh(AActor* overlappedActor, UStaticMesh* newMesh);
 };

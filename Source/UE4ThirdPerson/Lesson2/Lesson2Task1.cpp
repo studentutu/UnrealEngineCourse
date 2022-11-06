@@ -4,6 +4,8 @@
 #include "Lesson2Task1.h"
 
 
+float ALesson2Task1::tempFLot;
+
 // Sets default values
 ALesson2Task1::ALesson2Task1()
 {
@@ -33,7 +35,7 @@ void ALesson2Task1::Tick(float DeltaTime)
 
 void ALesson2Task1::ChangeMesh(AActor* overlappedActor, UStaticMesh* newMesh)
 {
-	if(overlappedActor == GetWorld()->GetFirstPlayerController()->GetPawn())
+	if (overlappedActor == GetWorld()->GetFirstPlayerController()->GetPawn())
 	{
 		MeshToSet->SetStaticMesh(newMesh);
 	}
