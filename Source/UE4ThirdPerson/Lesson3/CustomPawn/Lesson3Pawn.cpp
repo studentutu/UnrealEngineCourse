@@ -50,10 +50,20 @@ void ALesson3Pawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 void ALesson3Pawn::ZoomIn()
 {
+	float ZoomFieldOfViewStep = 2.5f;
+	float ZoomLengthStep = 16.166f;
+
+	Camera->FieldOfView = FMath::Clamp(Camera->FieldOfView - ZoomFieldOfViewStep, 75.0f, 90.0f);
+	SpringArm->TargetArmLength = FMath::Clamp(SpringArm->TargetArmLength - ZoomLengthStep, 200.0f, 300.0f);
 }
 
 void ALesson3Pawn::ZoomOut()
 {
+	float ZoomFieldOfViewStep = 2.5f;
+	float ZoomLengthStep = 16.166f;
+
+	Camera->FieldOfView = FMath::Clamp(Camera->FieldOfView + ZoomFieldOfViewStep, 75.0f, 90.0f);
+	SpringArm->TargetArmLength = FMath::Clamp(SpringArm->TargetArmLength + ZoomLengthStep, 200.0f, 300.0f);
 }
 
 void ALesson3Pawn::MoveForward(float Value)
