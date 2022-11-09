@@ -94,6 +94,7 @@ void ALesson3Pawn::MoveRight(float Value)
 
 void ALesson3Pawn::LookUp(float Value)
 {
+	// will not work if not enabled in BP on root component -> Pawn variable UseControllerPawnYaw/Pitch
 	auto turnRate = 50.0f;
 
 	if (GEngine)
